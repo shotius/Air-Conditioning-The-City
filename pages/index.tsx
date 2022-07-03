@@ -6,18 +6,18 @@ import {
   Heading,
   HStack,
   Icon,
-  Image,
   Stack,
   Text,
   VStack,
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 // import Image from 'next/image';
-import { FixIcon } from '../components/atoms/icons/FixIcon';
 import { RepairIcon } from '../components/atoms/icons/RepairIcon';
 import { InstallIcon } from '../components/atoms/icons/InstallIcon';
 import { RemoveIcon } from '../components/atoms/icons/RemoveIcon';
 import { ContactIcon } from '../components/atoms/icons/ContactIcon';
+import germana from '../assets/germana_big_compress.webp';
+import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
@@ -32,18 +32,9 @@ const Home: NextPage = () => {
           spacing={['4', '8']}
           direction={['column', null, 'row']}
         >
-          <AspectRatio
-            maxW="500px"
-            w="full"
-            minW={['100%', null, '50%']}
-            ratio={4 / 3}
-            bg="lime"
-          >
-            <Image
-              src="https://www.hhaircon.com.au/wp-content/uploads/2015/09/HH-Air-Conditioning1.jpg"
-              alt="Air conditioner"
-            />
-          </AspectRatio>
+          <Box minW={'50%'} bg="lightgray" display={'flex'} alignItems="stretch">
+            <Image src={germana} alt="Air conditioner" />
+          </Box>
           <VStack
             textAlign={['center', null, null, 'start']}
             align={['center', null, null, 'start']}
