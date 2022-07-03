@@ -14,11 +14,19 @@ import {
 import type { NextPage } from 'next';
 // import Image from 'next/image';
 import { FixIcon } from '../components/atoms/icons/FixIcon';
+import { RepairIcon } from '../components/atoms/icons/RepairIcon';
+import { InstallIcon } from '../components/atoms/icons/InstallIcon';
+import { RemoveIcon } from '../components/atoms/icons/RemoveIcon';
+import { ContactIcon } from '../components/atoms/icons/ContactIcon';
 
 const Home: NextPage = () => {
   return (
     <Box pt={['0', null, null, null, '16']} w="full" bg="#f1f1f1" minW="full">
-      <Container maxW="1380px" p="0" pb={[null, null, '74px']}>
+      <Container
+        maxW="1380px"
+        p="0"
+        pb={[null, null, null, null, '48px', '72px']}
+      >
         <Stack
           w="full"
           spacing={['4', '8']}
@@ -43,7 +51,9 @@ const Home: NextPage = () => {
             px={['4', null, '0']}
           >
             <Heading size="lg">About us</Heading>
-            <Heading size="4xl">Plan. Perform. Inspire.</Heading>
+            <Heading size={['xl', null, '2xl', '4xl']}>
+              Plan. Perform. Inspire.
+            </Heading>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
               saepe, ad tenetur mollitia soluta tempore voluptates illum ipsum
@@ -75,7 +85,7 @@ const Home: NextPage = () => {
           <Box maxW={['100%', null, '25%']} w="full" bg="#e2b731" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
-                <Icon as={FixIcon} boxSize="8" bg="white" />
+                <Icon as={InstallIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>მონტაჟი</Heading>
               <HStack justify={'space-between'}>
@@ -111,7 +121,7 @@ const Home: NextPage = () => {
           <Box maxW={['100%', null, '25%']} w="full" bg="#f0c635" p="8">
             <VStack w="full" pb="8">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
-                <Icon as={FixIcon} boxSize="8" bg="white" />
+                <Icon as={RepairIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>შეკეთება</Heading>
               <HStack justify={'space-between'}>
@@ -132,7 +142,7 @@ const Home: NextPage = () => {
           >
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
-                <Icon as={FixIcon} boxSize="8" bg="white" />
+                <Icon as={RemoveIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>დემონტაჟი</Heading>
               <HStack justify={'space-between'}>
@@ -147,7 +157,7 @@ const Home: NextPage = () => {
           <Box maxW={['100%', null, '25%']} w="full" bg="#f8e799" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
-                <Icon as={FixIcon} boxSize="8" bg="white" />
+                <Icon as={ContactIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>კონტაქტი</Heading>
               <HStack justify={'space-between'}>
