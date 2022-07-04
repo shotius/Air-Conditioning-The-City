@@ -16,7 +16,7 @@ import { RepairIcon } from '../components/atoms/icons/RepairIcon';
 import { InstallIcon } from '../components/atoms/icons/InstallIcon';
 import { RemoveIcon } from '../components/atoms/icons/RemoveIcon';
 import { ContactIcon } from '../components/atoms/icons/ContactIcon';
-import germana from '../assets/germana_big_compress.webp';
+import germana from '../assets/123_4.webp';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
@@ -32,7 +32,12 @@ const Home: NextPage = () => {
           spacing={['4', '8']}
           direction={['column', null, 'row']}
         >
-          <Box minW={'50%'} bg="lightgray" display={'flex'} alignItems="stretch">
+          <Box
+            minW={'50%'}
+            bg="lightgray"
+            display={'flex'}
+            alignItems="stretch"
+          >
             <Image src={germana} alt="Air conditioner" />
           </Box>
           <VStack
