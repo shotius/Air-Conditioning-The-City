@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             display={'flex'}
             alignItems="stretch"
           >
-            <Image height={1000} src={germana} alt="Air conditioner" />
+            <Image height={1050} src={germana} alt="Air conditioner" />
           </Box>
           <VStack
             textAlign={['center', null, null, 'start']}
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             px={['4', null, '0']}
           >
             <Text
-              fontSize={['39', null, null, '48', '64']}
+              fontSize={['39', null, null, '48', '58']}
               fontWeight="bold"
               lineHeight={['64px', null, null, '80px']}
             >
@@ -57,12 +57,12 @@ const Home: NextPage = () => {
             </Text>
             <Text lineHeight={'34px'} fontSize="26">
               <b>
-                ჩვენი გუნდი არის დიდი გამოცდილების მქონე და მაღალი{' '}
-                <b> პროფესიონალური</b> დონის. ჩვენ შეგვიძლია მოგიგვაროთ
-                კონდიციონერთან დაკავშირებული <b>ნებისმიერი პრობლემა, </b> ჩვენ
-                შეგვიძლია ჩავატაროთ კონდიციონერის ნებისმიერი სერვისი: მონტაჟი,
-                დემონტაჟი, გადატანა, შეკეთება, ფრეონით შევსება, გაწმენდა. <br />{' '}
-                ანდეთ თქვენი კომფორტი პროფესიონალებს.
+                - ჩვენი გუნდი არის დიდი გამოცდილების მქონე და მაღალი{' '}
+                პროფესიონალური დონის. ჩვენ შეგვიძლია მოგიგვაროთ კონდიციონერთან
+                დაკავშირებული ნებისმიერი პრობლემა, <br /> - ჩვენ შეგვიძლია
+                ჩავატაროთ კონდიციონერის ნებისმიერი სერვისი: მონტაჟი, დემონტაჟი,
+                გადატანა, შეკეთება, ფრეონით შევსება, გაწმენდა.
+                <br />- ანდეთ თქვენი კომფორტი პროფესიონალებს.
               </b>
             </Text>
 
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
                 </a>
               </Box>
               <Heading>კონტაქტი</Heading>
-              <HStack justify={'space-between'} fontSize="22px">
+              <HStack justify={'space-between'} fontSize="22px" >
                 <Text>Tel:</Text>
                 <Text>
                   <a href="tel:568000667">568-00-06-67</a>
