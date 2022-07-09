@@ -48,8 +48,11 @@ const Home: NextPage = () => {
             spacing="8"
             px={['4', null, '0']}
           >
-            {/* <Heading size="lg">ჩვენს შესახებ</Heading> */}
-            <Text fontSize={'64'} fontWeight="bold" lineHeight="80px">
+            <Text
+              fontSize={['39', null, null, '48', '64']}
+              fontWeight="bold"
+              lineHeight={['64px', null, null, '80px']}
+            >
               კონდიციონერის ხელოსანი
             </Text>
             <Text lineHeight={'34px'} fontSize="26">
@@ -138,13 +141,14 @@ const Home: NextPage = () => {
           <Box maxW={['100%', null, '25%']} w="full" bg="#f8e799" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
-                <Icon as={ContactIcon} boxSize="12" bg="white" />
+                <a href="tel:568000667">
+                  <Icon as={ContactIcon} boxSize="12" bg="white" />
+                </a>
               </Box>
               <Heading>კონტაქტი</Heading>
               <HStack justify={'space-between'} fontSize="22px">
                 <Text>Tel:</Text>
                 <Text>
-                  {' '}
                   <a href="tel:568000667">568-00-06-67</a>
                 </Text>
               </HStack>
