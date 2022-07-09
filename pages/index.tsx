@@ -22,19 +22,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const Home: NextPage = () => {
-  const [wallpaper, setWallpaper] = useState(germana);
-  const [height, setHeight] = useState(900);
-
-  function handleWallpaperChange() {
-    if (wallpaper === germana) {
-      setWallpaper(germana2);
-      setHeight(700);
-    } else {
-      setWallpaper(germana);
-      setHeight(900);
-    }
-  }
-
   return (
     <Box pt={['0', null, null, null, '16']} w="full" bg="#f1f1f1" minW="full">
       <Container
@@ -42,7 +29,6 @@ const Home: NextPage = () => {
         p="0"
         pb={[null, null, null, null, '48px', '72px']}
       >
-        <button onClick={handleWallpaperChange}>სურატის გადართვა</button>
         <Stack
           w="full"
           spacing={['4', '8']}
@@ -54,7 +40,7 @@ const Home: NextPage = () => {
             display={'flex'}
             alignItems="stretch"
           >
-            <Image height={height} src={wallpaper} alt="Air conditioner" />
+            <Image height={1000} src={germana} alt="Air conditioner" />
           </Box>
           <VStack
             textAlign={['center', null, null, 'start']}
@@ -62,20 +48,24 @@ const Home: NextPage = () => {
             spacing="8"
             px={['4', null, '0']}
           >
-            <Heading size="lg">ჩვენს შესახებ</Heading>
-            <Heading size={['xl', null, '2xl', '4xl']}>Plan.</Heading>
-            <Text>
-              ჩვენი გუნდი არის დიდი გამოცდილების მქონე და მაღალი{' '}
-              <b> პროფესიონალური</b> დონის. ჩვენ შეგვიძლია მოგიგვაროთ
-              კონდიციონერთან დაკავშირებული <b>ნებისმიერი პრობლემა, </b> ჩვენ
-              შეგვიძლია ჩავატაროთ კონდიციონერის ნებისმიერი სერვისი:{' '}
-              <b>
-                მონტაჟი, დემონტაჟი, გადატანა, შეკეთება, ფრეონით შევსება,
-                გაწმენდა.
-              </b>
-              თქვენი კონდიციონერი საიმედო ხელშია.
+            {/* <Heading size="lg">ჩვენს შესახებ</Heading> */}
+            <Text fontSize={'64'} fontWeight="bold" lineHeight="80px">
+              კონდიციონერის ხელოსანი
             </Text>
-            <Button
+            <Text lineHeight={'34px'} fontSize="26">
+              <b>
+                ჩვენი გუნდი არის დიდი გამოცდილების მქონე და მაღალი{' '}
+                <b> პროფესიონალური</b> დონის. ჩვენ შეგვიძლია მოგიგვაროთ
+                კონდიციონერთან დაკავშირებული <b>ნებისმიერი პრობლემა, </b> ჩვენ
+                შეგვიძლია ჩავატაროთ კონდიციონერის ნებისმიერი სერვისი:{' '}
+                <b>
+                  მონტაჟი, დემონტაჟი, გადატანა, შეკეთება, ფრეონით შევსება,
+                  გაწმენდა.
+                </b>
+                თქვენი კონდიციონერი საიმედო ხელშია.
+              </b>
+            </Text>
+            {/* <Button
               bg="#e4c347"
               borderRadius="none"
               textTransform="uppercase"
@@ -85,7 +75,7 @@ const Home: NextPage = () => {
               }}
             >
               Read more
-            </Button>
+            </Button> */}
             <Text>
               <b> ჩვენ ვმუშაობთ 24/7, დაგვიკავშირდით.</b>{' '}
             </Text>
@@ -105,14 +95,14 @@ const Home: NextPage = () => {
                 <Icon as={InstallIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>მონტაჟი</Heading>
-              <HStack justify={'space-between'}>
+              <HStack justify={'space-between'} fontSize="22px">
                 <Text>
                   60მ<sup>2</sup>
                 </Text>
                 <Text>-</Text>
                 <Text>120 ლ</Text>
               </HStack>
-              <HStack justify={'space-between'}>
+              <HStack justify={'space-between'} fontSize="22px">
                 <Text>
                   80მ<sup>2</sup>
                 </Text>
@@ -127,9 +117,7 @@ const Home: NextPage = () => {
                 <Icon as={RepairIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>შეკეთება</Heading>
-              <HStack justify={'space-between'}>
-                <Text>100 ლ</Text>
-              </HStack>
+              <Text fontSize="24px">100 ლ</Text>
             </VStack>
           </Box>
           <Box
@@ -144,9 +132,7 @@ const Home: NextPage = () => {
                 <Icon as={RemoveIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>დემონტაჟი</Heading>
-              <HStack justify={'space-between'}>
-                <Text>100 ლ</Text>
-              </HStack>
+              <Text fontSize="24px">100 ლ</Text>
             </VStack>
           </Box>
           <Box maxW={['100%', null, '25%']} w="full" bg="#f8e799" p="8">
@@ -155,9 +141,12 @@ const Home: NextPage = () => {
                 <Icon as={ContactIcon} boxSize="12" bg="white" />
               </Box>
               <Heading>კონტაქტი</Heading>
-              <HStack justify={'space-between'}>
+              <HStack justify={'space-between'} fontSize="22px">
                 <Text>Tel:</Text>
-                <Text>(+995) 597 77 79 86</Text>
+                <Text>
+                  {' '}
+                  <a href="tel:568000667">568-00-06-67</a>
+                </Text>
               </HStack>
             </VStack>
           </Box>
