@@ -16,10 +16,25 @@ import { RepairIcon } from '../components/atoms/icons/RepairIcon';
 import { InstallIcon } from '../components/atoms/icons/InstallIcon';
 import { RemoveIcon } from '../components/atoms/icons/RemoveIcon';
 import { ContactIcon } from '../components/atoms/icons/ContactIcon';
-import germana from '../assets/123_4.webp';
+import germana from '../assets/XXXL.webp';
+import germana2 from '../assets/germana_big_compress.webp';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [wallpaper, setWallpaper] = useState(germana);
+  const [height, setHeight] = useState(900);
+
+  function handleWallpaperChange() {
+    if (wallpaper === germana) {
+      setWallpaper(germana2);
+      setHeight(700);
+    } else {
+      setWallpaper(germana);
+      setHeight(900);
+    }
+  }
+
   return (
     <Box pt={['0', null, null, null, '16']} w="full" bg="#f1f1f1" minW="full">
       <Container
@@ -27,6 +42,7 @@ const Home: NextPage = () => {
         p="0"
         pb={[null, null, null, null, '48px', '72px']}
       >
+        <button onClick={handleWallpaperChange}>სურატის გადართვა</button>
         <Stack
           w="full"
           spacing={['4', '8']}
@@ -38,7 +54,7 @@ const Home: NextPage = () => {
             display={'flex'}
             alignItems="stretch"
           >
-            <Image src={germana} alt="Air conditioner" />
+            <Image height={height} src={wallpaper} alt="Air conditioner" />
           </Box>
           <VStack
             textAlign={['center', null, null, 'start']}
@@ -46,15 +62,18 @@ const Home: NextPage = () => {
             spacing="8"
             px={['4', null, '0']}
           >
-            <Heading size="lg">About us</Heading>
-            <Heading size={['xl', null, '2xl', '4xl']}>
-              Plan. Perform. Inspire.
-            </Heading>
+            <Heading size="lg">ჩვენს შესახებ</Heading>
+            <Heading size={['xl', null, '2xl', '4xl']}>Plan.</Heading>
             <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-              saepe, ad tenetur mollitia soluta tempore voluptates illum ipsum
-              ex cupiditate provident eum delectus reprehenderit distinctio
-              consequuntur! Voluptatem in velit tempore.
+              ჩვენი გუნდი არის დიდი გამოცდილების მქონე და მაღალი{' '}
+              <b> პროფესიონალური</b> დონის. ჩვენ შეგვიძლია მოგიგვაროთ
+              კონდიციონერთან დაკავშირებული <b>ნებისმიერი პრობლემა, </b> ჩვენ
+              შეგვიძლია ჩავატაროთ კონდიციონერის ნებისმიერი სერვისი:{' '}
+              <b>
+                მონტაჟი, დემონტაჟი, გადატანა, შეკეთება, ფრეონით შევსება,
+                გაწმენდა.
+              </b>
+              თქვენი კონდიციონერი საიმედო ხელშია.
             </Text>
             <Button
               bg="#e4c347"
@@ -67,7 +86,9 @@ const Home: NextPage = () => {
             >
               Read more
             </Button>
-            <Text> consequuntur! Voluptatem in velit tempore.</Text>
+            <Text>
+              <b> ჩვენ ვმუშაობთ 24/7, დაგვიკავშირდით.</b>{' '}
+            </Text>
           </VStack>
         </Stack>
         <Stack
@@ -86,31 +107,17 @@ const Home: NextPage = () => {
               <Heading>მონტაჟი</Heading>
               <HStack justify={'space-between'}>
                 <Text>
-                  20მ<sup>2</sup>
+                  60მ<sup>2</sup>
                 </Text>
                 <Text>-</Text>
-                <Text>100ლ</Text>
+                <Text>120 ლ</Text>
               </HStack>
               <HStack justify={'space-between'}>
                 <Text>
-                  30მ<sup>2</sup>
+                  80მ<sup>2</sup>
                 </Text>
                 <Text>-</Text>
-                <Text>100ლ</Text>
-              </HStack>
-              <HStack justify={'space-between'}>
-                <Text>
-                  40მ<sup>2</sup>
-                </Text>
-                <Text>-</Text>
-                <Text>100ლ</Text>
-              </HStack>
-              <HStack justify={'space-between'}>
-                <Text>
-                  50მ<sup>2</sup>
-                </Text>
-                <Text>-</Text>
-                <Text>100ლ</Text>
+                <Text>150 ლ</Text>
               </HStack>
             </VStack>
           </Box>
@@ -121,11 +128,7 @@ const Home: NextPage = () => {
               </Box>
               <Heading>შეკეთება</Heading>
               <HStack justify={'space-between'}>
-                <Text>
-                  20მ<sup>2</sup>
-                </Text>
-                <Text>-</Text>
-                <Text>100ლ</Text>
+                <Text>100 ლ</Text>
               </HStack>
             </VStack>
           </Box>
@@ -142,11 +145,7 @@ const Home: NextPage = () => {
               </Box>
               <Heading>დემონტაჟი</Heading>
               <HStack justify={'space-between'}>
-                <Text>
-                  20მ<sup>2</sup>
-                </Text>
-                <Text>-</Text>
-                <Text>100ლ</Text>
+                <Text>100 ლ</Text>
               </HStack>
             </VStack>
           </Box>
@@ -157,11 +156,8 @@ const Home: NextPage = () => {
               </Box>
               <Heading>კონტაქტი</Heading>
               <HStack justify={'space-between'}>
-                <Text>
-                  20მ<sup>2</sup>
-                </Text>
-                <Text>-</Text>
-                <Text>100ლ</Text>
+                <Text>Tel:</Text>
+                <Text>(+995) 597 77 79 86</Text>
               </HStack>
             </VStack>
           </Box>
@@ -170,5 +166,17 @@ const Home: NextPage = () => {
     </Box>
   );
 };
+<style jsx global>{`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Lobster;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`}</style>;
 
 export default Home;
