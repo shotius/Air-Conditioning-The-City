@@ -1,25 +1,20 @@
 import {
-  AspectRatio,
-  Box,
-  Button,
-  Container,
+  Box, Container,
   Heading,
   HStack,
   Icon,
   Stack,
   Text,
-  VStack,
+  VStack
 } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 // import Image from 'next/image';
-import { RepairIcon } from '../components/atoms/icons/RepairIcon';
+import Image from 'next/image';
+import germana from '../assets/XXXL.webp';
+import { ContactIcon } from '../components/atoms/icons/ContactIcon';
 import { InstallIcon } from '../components/atoms/icons/InstallIcon';
 import { RemoveIcon } from '../components/atoms/icons/RemoveIcon';
-import { ContactIcon } from '../components/atoms/icons/ContactIcon';
-import germana from '../assets/XXXL.webp';
-import germana2 from '../assets/germana_big_compress.webp';
-import Image from 'next/image';
-import { useState } from 'react';
+import { RepairIcon } from '../components/atoms/icons/RepairIcon';
 
 const Home: NextPage = () => {
   return (
@@ -79,7 +74,7 @@ const Home: NextPage = () => {
           minH="350px"
           mt={['8', null, '0']}
         >
-          <Box maxW={['100%', null, '25%']} w="full" bg="#e2b731" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#4B4A54" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <Icon as={InstallIcon} boxSize="12" bg="white" />
@@ -101,7 +96,7 @@ const Home: NextPage = () => {
               </HStack>
             </VStack>
           </Box>
-          <Box maxW={['100%', null, '25%']} w="full" bg="#f0c635" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#677381" p="8">
             <VStack w="full" pb="8">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <Icon as={RepairIcon} boxSize="12" bg="white" />
@@ -113,7 +108,7 @@ const Home: NextPage = () => {
           <Box
             maxW={['100%', null, '25%']}
             w="full"
-            bg="#f2d554"
+            bg="#82A0AA"
             p="8"
             minH="300px"
           >
@@ -125,7 +120,7 @@ const Home: NextPage = () => {
               <Text fontSize="24px">100 ლ</Text>
             </VStack>
           </Box>
-          <Box maxW={['100%', null, '25%']} w="full" bg="#f8e799" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#A3CFCD" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <a href="tel:568000667">
