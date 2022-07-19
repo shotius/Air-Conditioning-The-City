@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           minH="350px"
           mt={['8', null, '0']}
         >
-          <Box maxW={['100%', null, '25%']} w="full" bg="#4B4A54" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#768DA0" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <Icon as={InstallIcon} boxSize="12" bg="white" />
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               </HStack>
             </VStack>
           </Box>
-          <Box maxW={['100%', null, '25%']} w="full" bg="#677381" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#90AEC3" p="8">
             <VStack w="full" pb="8">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <Icon as={RepairIcon} boxSize="12" bg="white" />
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
           <Box
             maxW={['100%', null, '25%']}
             w="full"
-            bg="#82A0AA"
+            bg="#C2D5DF"
             p="8"
             minH="300px"
           >
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
               <Text fontSize="24px">100 ლ</Text>
             </VStack>
           </Box>
-          <Box maxW={['100%', null, '25%']} w="full" bg="#A3CFCD" p="8">
+          <Box maxW={['100%', null, '25%']} w="full" bg="#DDE7EC" p="8">
             <VStack w="full">
               <Box borderRadius={'100px'} bg="white" p="4" mb="4">
                 <a href="tel:568000667">
